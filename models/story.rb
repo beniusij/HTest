@@ -4,20 +4,17 @@ require_relative 'sentence'
 class Story
 
   attr_reader :root
-  attr_accessor :sentences
+  attr_accessor :current
 
   # Initialize object by adding a root sentence
   def initialize(sentence)
     @root = Sentence.new(sentence)
-  end
-
-  def add_sentence(sentence)
-    @sentences[] = Sentence.new(sentence)
+    @current = @root
   end
 
   # @param id
-  def get_sentence(id)
-    @sentences[id]
+  def update_sentence(id)
+    @current = @current.get_sentence_node(id.to_i)
   end
 
 end

@@ -8,7 +8,11 @@ class Sentence
     @options = []
   end
 
-  def get_sentence
-    @sentence
+  def get_sentence_node(id)
+    @options[id.to_i]
+  end
+
+  def add_sentence_node(id, sentence)
+    @options[id.to_i] = Sentence.new(sentence)
   end
 end
