@@ -7,7 +7,7 @@ This short report provides an overview on application specifications, design
 
 1. Unzip the package
 2. In the terminal, execute following commands: 
-    1. `gem install bunlder`
+    1. `gem install bundler`
     2. `cd` to the project directory
     3. `bundler install`
     4. Run `rackup configure.ru` command
