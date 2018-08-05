@@ -1,3 +1,6 @@
+# Class represents a node in a Tree structure.
+# The node has 2 properties: sentences and an
+# array for next 4 sentences.
 class Sentence
 
   attr_reader :sentence

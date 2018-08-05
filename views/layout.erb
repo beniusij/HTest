@@ -1,0 +1,58 @@
+<html>
+<head>
+  <title>Stories Web Builder</title>
+  <style>
+    td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+<a href='/back-to-start'>Back to the start.</a>
+<table>
+  <tr>
+    <td></td>
+    <td>
+      <% id = 1 %>
+      <% if @current_sentence.get_sentence_node(id) %>
+        <%= erb :link, :locals => { id: id }  %>
+      <% else %>
+        <%= erb :form, :locals => { id: id } %>
+      <% end %>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>
+      <% id = 2 %>
+      <% if @current_sentence.get_sentence_node(id) %>
+        <%= erb :link, :locals => { id: id }  %>
+      <% else %>
+        <%= erb :form, :locals => { id: id } %>
+      <% end %>
+    </td>
+    <td><%= @current_sentence.sentence %></td>
+    <td>
+      <% id = 3 %>
+      <% if @current_sentence.get_sentence_node(id) %>
+        <%= erb :link, :locals => { id: id }  %>
+      <% else %>
+        <%= erb :form, :locals => { id: id } %>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <% id = 4 %>
+      <% if @current_sentence.get_sentence_node(id) %>
+        <%= erb :link, :locals => { id: id }  %>
+      <% else %>
+        <%= erb :form, :locals => { id: id } %>
+      <% end %>
+    </td>
+    <td></td>
+  </tr>
+</table>
+</body>
+</html>
