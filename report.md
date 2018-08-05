@@ -15,7 +15,7 @@ This short report provides an overview on application specifications, design
 
 ### Prerequisites
  
-* Ruby v1.8^
+* Ruby version >= 2.2.0
 
 ## Application design and implementation
 
